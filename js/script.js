@@ -156,16 +156,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add loading animation to images
+// Remove loading animation to avoid delay in image display
 const images = document.querySelectorAll('img');
 images.forEach(img => {
-    img.addEventListener('load', () => {
-        img.style.opacity = '1';
-    });
-    
-    // Set initial opacity
-    img.style.opacity = '0';
-    img.style.transition = 'opacity 0.3s ease';
+    img.style.opacity = '1';
+    img.style.transition = '';
 });
 
 // Typing effect for hero title (optional enhancement)
